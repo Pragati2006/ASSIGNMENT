@@ -1,17 +1,19 @@
 #include<stdio.h>
-#include<stdbool.h>
 int main(){
     int n;
-    printf("Enter the number: ");
+    printf("enter the number");
     scanf("%d",&n);
-    bool isprime = true;
-    for(int i = 2 ; i <= n/2 ; i++){
-        if( n % i == 0 ){
-           isprime  = false;
-        }
+    int c=0,i=2;
+    while(i<=n/2){
+        if(n%i==0){
+            c=1;
+            break;
+    }i++;
     }
-    if(n == 0) printf("The number is neither prime nor composite\n");
-    else if (isprime ) printf("The number is prime\n");
-    else printf("The number is not prime\n");
+    if(n==1){
+    printf("1 is neither prime nor composite");}
+    else if (c==0){
+    printf("%d is a prime number",n);}
+    else{printf("%d is a composite number",n);}
     return 0;
 }
